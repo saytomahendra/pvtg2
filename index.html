@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+     <head>
+	<script src="angular.min.js"></script>
+	<script src="app.js"></script>
+       
+	<title>Hello Angular JS</title>
+      </head>
+
+	<body ng-app="firstDemo" ng-controller="MainCtrl">
+		<h1>MEAN technology stacks includes following</h1>
+		<br>
+  	  <div ng-repeat="test in tests | orderBy:'-stars'" style="color:blue">
+		{{test.title}} has {{test.stars}} stars
+	  </div>
+		
+	  <div>
+		<h3>Add other technologies and Ratings</h3>
+		<form ng-submit="addTech()">
+		<b>Technology</b> <input type="text" ng-model="title"/>
+		<b>Ratings</b>	  <input type="text" ng-model="stars"/>	
+		 <button type="submit">Add Technology</button>
+		</form> 
+	  
+	  </div>
+
+	</body>
+
+</html>
